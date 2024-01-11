@@ -24,6 +24,6 @@
 - Repository : https://github.com/hoon25/java-playground-study/tree/hoon25
     - Assignee : 최창훈
     - Reviewer : 박충호
-- Repository : 
+- Repository : https://github.com/hoon25/java-playground-study/tree/parkchoongho
     - Assignee : 최창훈
     - Reviewer : 박충호
