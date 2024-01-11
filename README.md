@@ -25,5 +25,5 @@
     - Assignee : 최창훈
     - Reviewer : 박충호
 - Repository : https://github.com/hoon25/java-playground-study/tree/parkchoongho
-    - Assignee : 최창훈
-    - Reviewer : 박충호
+    - Assignee : 박충호
+    - Reviewer : 최창훈
