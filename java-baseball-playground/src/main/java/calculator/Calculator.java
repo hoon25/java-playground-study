@@ -26,7 +26,7 @@ public class Calculator {
     }
 
     private int calculate(int a, int b, Operation operation) {
-        if (operation == Operation.PLUS){
+        if (operation == Operation.PLUS) {
             return add(a, b);
         }
         if (operation == Operation.MINUS) {
@@ -54,6 +54,9 @@ public class Calculator {
     }
 
     private int division(int a, int b) {
+        if (a % b != 0) {
+            throw new IllegalArgumentException(String.format("%s / %s : 나머지가 있는 나눗셈은 불가능합니다.", a, b));
+        }
         return a / b;
     }
 }
