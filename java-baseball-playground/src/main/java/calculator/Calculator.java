@@ -19,27 +19,26 @@ public class Calculator {
         int result = Integer.parseInt(values[0]);
         for (int i = 1; i < values.length; i += 2) {
             String operation = values[i];
-            int b = Integer.parseInt(values[i + 1]);
-
-            if (operation.equals("+")) {
-                result = add(result, b);
-                continue;
-            }
-            if (operation.equals("-")) {
-                result = minus(result, b);
-                continue;
-            }
-            if (operation.equals("*")) {
-                result = multiplication(result, b);
-                continue;
-            }
-            if (operation.equals("/")) {
-                result = division(result, b);
-                continue;
-            }
-            throw new IllegalArgumentException(String.format("%s은 지원하지 않는 연산기호입니다.", operation));
+            int nextNumber = Integer.parseInt(values[i + 1]);
+            result = calculate(result, nextNumber, operation);
         }
         return result;
+    }
+
+    private int calculate(int a, int b, String operation) {
+        if (operation.equals("+")) {
+            return add(a, b);
+        }
+        if (operation.equals("-")) {
+            return minus(a, b);
+        }
+        if (operation.equals("*")) {
+            return multiplication(a, b);
+        }
+        if (operation.equals("/")) {
+            return division(a, b);
+        }
+        throw new IllegalArgumentException(String.format("%s은 지원하지 않는 연산기호입니다.", operation));
     }
 
     private int add(int a, int b) {
