@@ -9,7 +9,7 @@ public class Main {
 
         Calculator calculator = new Calculator();
 
-        int result =  calculator.calculate(statement);
+        int result =  calculator.getResult(statement);
 
         System.out.println(result);
     }
