@@ -24,12 +24,12 @@ public class SetTest {
 
     @Test
     void size() {
-        assertThat(numbers.size()).isEqualTo(3);
+        assertThat(numbers).hasSize(3);
     }
 
-    @ParameterizedTest
+    @ParameterizedTest(name="{0} / contains / {1}")
     @CsvSource(value = {"1:true","2:true","3:true","4:false","5:false"}, delimiter = ':')
-    void contains(String argument, String expected) {
-        assertThat(numbers.contains(Integer.valueOf(argument))).isEqualTo(Boolean.valueOf(expected));
+    void contains(int argument, boolean expected) {
+        assertThat(numbers.contains(argument)).isEqualTo(expected);
     }
 }
