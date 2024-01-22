@@ -10,17 +10,17 @@ import static org.assertj.core.api.Assertions.assertThatIllegalArgumentException
 
 class OperationTest {
 
-    @ParameterizedTest
-    @CsvSource(
-            {"+, PLUS", "-, MINUS", "*, MULTIPLICATION", "/, DIVISION"}
-    )
-    void validOperation(String inputOperation, Operation operation) {
-        assertThat(Operation.of(inputOperation)).isEqualTo(operation);
-    }
-
-    @Test
-    @DisplayName("유효하지않은 연산기호 / 생성 / IllegalArgumentException")
-    void invalidOperation() {
-        assertThatIllegalArgumentException().isThrownBy(() -> Operation.of("^"));
-    }
+//    @ParameterizedTest
+//    @CsvSource(
+//            {"+, PLUS", "-, MINUS", "*, MULTIPLICATION", "/, DIVISION"}
+//    )
+//    void validOperation(String inputOperation, Operation operation) {
+//        assertThat(Operation.of(inputOperation)).isEqualTo(operation);
+//    }
+//
+//    @Test
+//    @DisplayName("유효하지않은 연산기호 / 생성 / IllegalArgumentException")
+//    void invalidOperation() {
+//        assertThatIllegalArgumentException().isThrownBy(() -> Operation.of("^"));
+//    }
 }

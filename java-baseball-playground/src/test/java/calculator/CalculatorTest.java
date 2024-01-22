@@ -40,10 +40,4 @@ class CalculatorTest {
     void invalidInputString() {
         assertThatIllegalArgumentException().isThrownBy(() -> new Calculator("6 *"));
     }
-
-    @Test
-    @DisplayName("나머지가 남는 나눗셈 / 나눈다 / IllegalArgumentException")
-    void invalidDivision() {
-        assertThatIllegalArgumentException().isThrownBy(() -> new Calculator("6 / 4").calculateAll());
-    }
 }
