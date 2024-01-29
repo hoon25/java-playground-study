@@ -1,16 +1,12 @@
-import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args) {
-        System.out.println("원하는 문자열을 입력하세요!");
-        Scanner scanner = new Scanner(System.in);
-        String statement = scanner.nextLine();
-        scanner.close();
+        while(true) {
+            BaseBallGame baseBallGame = BaseBallGame.from();
+            baseBallGame.play();
+            System.out.println("게임을 새로 시작하려면 1, 종료하려면 2를 입력하세요.");
+            int checker = InputView.getChecker();
+            if (checker == 2) break;
+        }
 
-        Calculator calculator = new Calculator();
-
-        int result =  calculator.getResult(statement);
-
-        System.out.println(result);
     }
 }
